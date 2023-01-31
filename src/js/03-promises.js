@@ -28,3 +28,4 @@ promiseButton.addEventListener('click', e => {
     }, parseInt(delayInput.value) + i * parseInt(stepInput.value));
   }
 });
+// jakakolwiek zmiana kodu
