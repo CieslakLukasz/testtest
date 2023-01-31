@@ -18,9 +18,13 @@ function createPromise(position, delay) {
 
 promiseButton.addEventListener('click', e => {
   e.preventDefault();
-  for (let i = 0; i <= amountInput.value; i++) {
+
+  for (let i = 0; i < amountInput.value; i++) {
     setTimeout(() => {
-      createPromise(i + 1, delayInput.value + i * stepInput.value);
-    }, delayInput.value + i * stepInput.value);
+      createPromise(
+        i + 1,
+        parseInt(delayInput.value) + i * parseInt(stepInput.value)
+      );
+    }, parseInt(delayInput.value) + i * parseInt(stepInput.value));
   }
 });
